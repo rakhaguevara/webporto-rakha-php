@@ -1,0 +1,224 @@
+/*  FONTS GOOGLE  */
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&family=Poppins:wght@400;500;600;700;800&display=swap");
+
+/*  VARIABLE  */
+:root {
+  --primary-color: #176b87;
+  --dark-color: #001c30;
+  --gray-color: gray;
+
+  --h1-font-size: 40px;
+  --h2-font-size: 48px;
+  --small-font-size: 14px;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ====== LAYOUT FIX - KUNCI FOOTER STICKY ====== */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Wrapper untuk semua konten kecuali footer */
+.main-content {
+  flex: 1 0 auto;
+}
+
+/* Footer akan tetap di bawah */
+footer {
+  flex-shrink: 0;
+  background-color: var(--dark-color);
+  color: white;
+  padding: 30px 0;
+  text-align: center;
+  margin-top: auto;
+}
+
+/* =================================== */
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* GLOBAL */
+section {
+  padding: 40px 0;
+}
+
+.section-title {
+  font-size: var(--h2-font-size);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.text-orange {
+  color: var(--primary-color);
+}
+
+.text-dark {
+  color: var(--dark-color);
+}
+
+.fs-7 {
+  font-size: var(--small-font-size);
+}
+
+/* BUTTON */
+.btn-orange {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.btn-orange:hover {
+  background-color: var(--dark-color);
+}
+
+/* HEADER */
+.header-section .header-title {
+  font-size: var(--h1-font-size);
+}
+
+/* ===============================
+   PORTFOLIO
+================================ */
+.portfolio-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  background: #fff;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-image {
+  width: 100%;
+  height: auto;              /* ⬅️ penting */
+  aspect-ratio: 16 / 9;      /* ⬅️ bikin konsisten */
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #dcdcdc;
+  background: #fafafa;
+  margin-bottom: 14px;
+}
+
+.portfolio-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.portfolio-category {
+  font-size: 0.8rem;
+  color: #6c757d;
+  text-transform: uppercase;
+}
+
+.portfolio-desc {
+  font-size: 0.85rem;
+  color: #495057;
+}
+
+.portfolio-link {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #0d6efd;
+}
+
+/* SKILLS */
+.skills-section {
+  background-color: var(--dark-color);
+}
+
+.skills-section .progress-bar {
+  height: 10px;
+  background-color: var(--gray-color);
+ 
+  border-radius: 10px;
+}
+
+.skills-section .progress {
+  background-color: var(--primary-color);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .portfolio-image {
+    height: 180px;
+  }
+
+  .portfolio-card {
+    height: 100%;
+  }
+  
+  /* Swiper slide biar center */
+.swiper-slide {
+  height: auto;
+  display: flex;
+}
+  
+}
+
+/* ===============================
+   MOBILE (HP)
+================================ */
+@media (max-width: 575px) {
+  .portfolio-section {
+    padding: 40px 0;
+  }
+
+  .portfolio-image {
+    height: 160px;
+  }
+
+  .portfolio-title {
+    font-size: 0.9rem;
+  }
+
+  .swiper {
+    padding-bottom: 16px;
+  }
+  
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    height: auto;
+  }
+  
+
+  .portfolio-desc {
+    font-size: 0.8rem;
+  }
+
+  /* tombol swiper lebih dekat */
+  .btn-prev,
+  .btn-next {
+    padding-top: 8px;
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/* ===============================
+   TABLET
+================================ */
+@media (min-width: 576px) and (max-width: 991px) {
+  .portfolio-image {
+    height: 190px;
+  }
+}
